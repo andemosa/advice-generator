@@ -8,7 +8,7 @@ const fetcher = (url: RequestInfo | URL) =>
   fetch(url).then((res) => res.json());
 
 function App() {
-  const { data, error, isLoading, mutate } = useSWRImmutable(
+  const { data, error, isLoading, isValidating, mutate } = useSWRImmutable(
     "https://api.adviceslip.com/advice",
     fetcher
   );
@@ -23,7 +23,7 @@ function App() {
     >
       {error ? (
         <Text>An error occurred while fetching advice</Text>
-      ) : isLoading ? (
+      ) : isLoading || isValidating ? (
         <CircularProgress isIndeterminate color="brand.800" />
       ) : (
         <Flex
@@ -47,6 +47,10 @@ function App() {
             position={"absolute"}
             bottom={"-30px"}
             cursor={"pointer"}
+            borderRadius={"full"}
+            _hover={{
+              boxShadow: "0 0 2rem #53ffaa",
+            }}
             onClick={() => mutate()}
           >
             <Button />
