@@ -19,10 +19,16 @@ This is an advice generator app.
 - Implement the [figma design](https://www.figma.com/file/5XLmnBEwWWGUtq1Ivnm7ei/advice-generator-app?type=design&node-id=0%3A48&mode=design&t=pmWRv6TxZiAL3eGi-1)
 - Use data from [provided endpoint](https://api.adviceslip.com/)
 
+### Screenshot
+
+![Desktop view](./screenshots/advice.png)
+###
+![Mobile view](./screenshots/mobile.jpg)
+
 
 ### Links
 
-- Live Site URL: ()
+- Live Site URL: (https://andemosa-advice-generator.netlify.app/)
 
 ## My process
 
